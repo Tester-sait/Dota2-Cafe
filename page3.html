@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+
+    <style>
+        body {
+            background: #1e1e1e;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .form-box {
+            background: #222;
+            padding: 20px;
+            width: 320px;
+            margin: auto;
+            border-radius: 10px;
+            border: 2px solid gold;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: gold;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: red;
+            color: white;
+        }
+
+        /* Баннеры по бокам */
+        .side-banner {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 120px;
+            cursor: pointer;
+            border: 5px solid gold;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .left-banner {
+            left: 10px;
+        }
+
+        .right-banner {
+            right: 10px;
+        }
+
+        .side-banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Оформление заказа</h1>
+
+    <div class="form-box">
+        <input type="text" placeholder="Ваше ім'я">
+        <input type="text" placeholder="Номер телефону">
+        <input type="text" placeholder="Адрес доставки">
+        <input type="text" placeholder="Номер картки">
+        <button onclick="alert('Замовлення оформлено!')">Підтвердити</button>
+    </div>
+
+    <!-- Левый баннер -->
+    <div class="side-banner left-banner" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Левый баннер">
+    </div>
+
+    <!-- Правый баннер -->
+    <div class="side-banner right-banner" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Правый баннер">
+    </div>
+
+</body>
+</html>
