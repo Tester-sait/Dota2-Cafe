@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="style3.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="checkout-header">
+        <a href="page2.html" class="back-link"><i class="fas fa-arrow-left"></i> Назад в Меню</a>
+        <h1><i class="fas fa-receipt"></i> Оформление заказа</h1>
+    </header>
+
+    <div class="form-box">
+        <h2>Данные для доставки</h2>
+        <input type="text" placeholder="Ваше ім'я та прізвище" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Номер телефону" required>
+        <input type="text" placeholder="Адрес доставки (Город, улица, дом)" required>
+        
+        <h2>Оплата</h2>
+        <input type="text" placeholder="Номер картки (Visa/Mastercard)" required>
+        <input type="text" placeholder="Срок действия (ММ/ГГ)" style="width: 45%; margin-right: 5%;" required>
+        <input type="text" placeholder="CVV" style="width: 45%;" required>
+
+        <button onclick="alert('Замовлення оформлено! Ваш кур\'єр уже в пути!')">Підтвердити замовлення</button>
+    </div>
+
+    <div class="side-banner left-banner" onclick="window.open('https://store.steampowered.com/app/570/Dota_2/?l=russian', '_blank')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Акция">
+    </div>
+    <div class="side-banner right-banner" onclick="window.open('https://store.steampowered.com/app/570/Dota_2/?l=russian', '_blank')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Акция">
+    </div>
+
+    <footer>
+        <p>© 2025 Golden Shop • Всі права не захищені)</p>
+        <p class="small-text">Дякуємо за оформлення замовлення!</p>
+    </footer>
+
+</body>
+</html>

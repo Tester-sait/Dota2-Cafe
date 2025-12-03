@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню Dota 2</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="https://i.imgur.com/8Qp40pB.png" alt="Dota 2 Logo" class="dota-logo">
+                    <span class="dota-title">DOTA 2</span>
+                </a>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="index.html#about">О нас</a>
+                <a href="https://store.steampowered.com/app/570/Dota_2/?l=russian" target="_blank">Дота2</a>
+            </div>
+
+            <div class="search-cart-area">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="cart" id="cartBtn"> 
+                    <i class="fas fa-shopping-basket cart-icon"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="cartWindow" class="cart-window">
+        <h2><i class="fas fa-shopping-basket"></i> Ваша Корзина</h2>
+        <ul id="cartItems"> 
+            <li>Корзина пуста. Добавьте предметы!</li>
+        </ul>
+        <div class="cart-total">
+            Общая цена: <span id="totalPrice">0</span> монет
+        </div>
+        <button id="checkoutBtn" class="checkout-button">Оформить заказ</button>
+    </div>
+
+    <h1 class="page-title">
+        <i class="fas fa-swords"></i> КАТАЛОГ ПРЕДМЕТОВ <i class="fas fa-shield-alt"></i>
+    </h1>
+
+    <main class="container">
+        <aside class="sidebar">
+            <div class="section">
+                <h2>КАТЕГОРИИ</h2>
+                <ul>
+                    <li><label><input type="radio" name="category" checked> Расходники (5)</label></li>
+                    <li><label><input type="radio" name="category"> Артефакты (12)</label></li>
+                    <li><label><input type="radio" name="category"> Снаряжение (9)</label></li>
+                    <li><label><input type="radio" name="category"> Свитки (3)</label></li>
+                </ul>
+            </div>
+            <div class="section filters">
+                <h2>ФИЛЬТРЫ</h2>
+                <label>Цена: от <input type="number" value="0" min="0"> до <input type="number" value="1000" min="0"></label>
+                <button class="apply-button">ПРИМЕНИТЬ</button>
+            </div>
+        </aside>
+
+        <section class="products-grid">
+            <div class="sort-bar">
+                Сортировка: <a href="#">По цене</a>
+            </div>
+
+            <div class="product-list">
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/t3O4j1e.png" alt="Mango"></div>
+                    <h3 class="product-name">Mango</h3>
+                    <p class="product-category">Расходник</p>
+                    <p class="product-price">Цена: 65</p>
+                    <button class="buy-button buyBtn" data-name="Mango" data-price="65">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/L3kP4nN.png" alt="Tango"></div>
+                    <h3 class="product-name">Tango</h3>
+                    <p class="product-category">Расходник</p>
+                    <p class="product-price">Цена: 90</p>
+                    <button class="buy-button buyBtn" data-name="Tango" data-price="90">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Bottle"></div>
+                    <h3 class="product-name">Bottle</h3>
+                    <p class="product-category">Расходник</p>
+                    <p class="product-price">Цена: 660</p>
+                    <button class="buy-button buyBtn" data-name="Bottle" data-price="660">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/vH1mB9i.png" alt="Magic Stick"></div>
+                    <h3 class="product-name">Magic Stick</h3>
+                    <p class="product-category">Основное</p>
+                    <p class="product-price">Цена: 200</p>
+                    <button class="buy-button buyBtn" data-name="Magic Stick" data-price="200">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/2Xy1V8T.png" alt="Healing Salve"></div>
+                    <h3 class="product-name">Healing Salve</h3>
+                    <p class="product-category">Расходник</p>
+                    <p class="product-price">Цена: 100</p>
+                    <button class="buy-button buyBtn" data-name="Healing Salve" data-price="100">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Boots of Speed"></div>
+                    <h3 class="product-name">Boots of Speed</h3>
+                    <p class="product-category">Снаряжение</p>
+                    <p class="product-price">Цена: 450</p>
+                    <button class="buy-button buyBtn" data-name="Boots of Speed" data-price="450">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Observer Ward"></div>
+                    <h3 class="product-name">Observer Ward</h3>
+                    <p class="product-category">Расходник</p>
+                    <p class="product-price">Цена: 0</p>
+                    <button class="buy-button buyBtn" data-name="Observer Ward" data-price="0">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Phase Boots"></div>
+                    <h3 class="product-name">Phase Boots</h3>
+                    <p class="product-category">Снаряжение</p>
+                    <p class="product-price">Цена: 1650</p>
+                    <button class="buy-button buyBtn" data-name="Phase Boots" data-price="1650">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Blade Mail"></div>
+                    <h3 class="product-name">Blade Mail</h3>
+                    <p class="product-category">Артефакт</p>
+                    <p class="product-price">Цена: 2200</p>
+                    <button class="buy-button buyBtn" data-name="Blade Mail" data-price="2200">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Aghanim's Scepter"></div>
+                    <h3 class="product-name">Aghanim's Scepter</h3>
+                    <p class="product-category">Артефакт</p>
+                    <p class="product-price">Цена: 4200</p>
+                    <button class="buy-button buyBtn" data-name="Aghanim's Scepter" data-price="4200">Придбати</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="social-title">Наши соцсети</p>
+        <p>Номер телефона | Город: Бельвю, Вашингтон</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="categories.js"></script>
+
+</body>
+</html>
