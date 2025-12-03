@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dota 2</title>
+    <title>Dota 2 - Golden Shop</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="image-container"></div>
-        <nav>
-            <ul>
-                <li><a href="#news">Что нового?</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="https://store.steampowered.com/app/570/Dota_2/?l=russian" target="_blank">Дота2</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="logo-area">
+                <div class="image-container"></div>
+                <span class="dota-title">DOTA 2</span>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="page2.html">Меню (Магазин)</a></li> 
+                    <li><a href="#news">Что нового?</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="https://store.steampowered.com/app/570/Dota_2/?l=russian" target="_blank" class="steam-link">
+                        <i class="fab fa-steam"></i> Играть в Dota 2
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
-    <section class="hero">
-        <h1>Dota 2</h1>
-        <p>Замов, і твій кур'єр принесе прапорець для твого кері!</p>
-        <a href="page2.html">Меню</a>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>Dota 2: Golden Shop</h1>
+            <p>Замов, і твій кур'єр принесе прапорець для твого кері!</p>
+            <a href="page2.html" class="menu-btn">Перейти в Меню</a>
+        </section>
 
-    <h2 id="about">О нас</h2>
-    <p>Dota 2 — розрахована на багато користувачів командна комп'ютерна гра в жанрі MOBA...</p>
-    
-    <div class="image-container2"></div>
-
-    <h2 id="news">19 марта 2025 — Обновление Dota 2</h2>
-    <p>Зміни режиму Immortal Draft...</p>
+        <section id="about" class="info-section">
+            <h2>О нас</h2>
+            <div class="image-container2"></div>
+            <p>Dota 2 — розрахована на багато користувачів командна комп'ютерна гра в жанрі MOBA. Два противники...</p>
+            <p>...управляют своими персонажами, называемыми «героями», и стараются уничтожить «Древнего» (англ. Ancient) — главное здание, расположенное на базе противника.</p>
+        </section>
+        
+        <section id="news" class="info-section">
+            <h2>19 марта 2025 — Обновление Dota 2</h2>
+            <p>Зміни режиму Immortal Draft, новые сундуки с редкостями, и балансные правки для 15 героев. Ознакомьтесь с полным патчноутом на официальном сайте Valve.</p>
+        </section>
+    </main>
 
     <footer>
-        <p>Наші соцмережі</p>
-        <a href="https://store.steampowered.com/app/570/Dota_2/?l=russian" target="_blank">
-            <img src="https://habrastorage.org/webt/43/f0/pa/43f0paj4ek-x5lwmjplzu2wbfac.jpeg" alt="Социальные сети" class="social-icons">
-        </a>
-        <p>Номер телефона | Місто: Белвью, Вашингтон</p>
+        <div class="footer-content">
+            <p class="social-title">Наші соцмережі</p>
+            <a href="https://store.steampowered.com/app/570/Dota_2/?l=russian" target="_blank" title="Dota 2 в Steam">
+                <i class="fab fa-steam social-icon"></i>
+            </a>
+            <p>Номер телефона | Місто: Белвью, Вашингтон</p>
+            <p class="copyright">© 2025 Golden Shop | Все права не защищены)</p>
+        </div>
     </footer>
-
 </body>
 </html>

@@ -4,127 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оформление заказа</title>
-
-    <style>
-        body {
-            background: #1e1e1e;
-            color: white;
-            font-family: Arial;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .form-box {
-            background: #222;
-            padding: 20px;
-            width: 320px;
-            margin: auto;
-            border-radius: 10px;
-            border: 2px solid gold;
-        }
-
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: none;
-        }
-
-        button {
-            padding: 10px 20px;
-            background: gold;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background: red;
-            color: white;
-        }
-
-        /* Баннеры по бокам */
-        .side-banner {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 120px;
-            cursor: pointer;
-            border: 5px solid gold;
-            border-radius: 10px;
-            z-index: 1000;
-        }
-
-        .left-banner {
-            left: 10px;
-        }
-
-        .right-banner {
-            right: 10px;
-        }
-
-        .side-banner img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        /* Свечение вокруг формы */
-        .form-box {
-            animation: glow 2s infinite alternate;
-        }
-
-        @keyframes glow {
-        from {
-            box-shadow: 0 0 10px gold;
-        }
-        to {
-            box-shadow: 0 0 25px 5px gold;
-        }
-}
-
-    </style>
+    <link rel="stylesheet" href="style3.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <h1>Оформление заказа</h1>
+    <header class="checkout-header">
+        <a href="page2.html" class="back-link"><i class="fas fa-arrow-left"></i> Назад в Меню</a>
+        <h1><i class="fas fa-receipt"></i> Оформление заказа</h1>
+    </header>
 
     <div class="form-box">
-        <input type="text" placeholder="Ваше ім'я">
-        <input type="text" placeholder="Номер телефону">
-        <input type="text" placeholder="Адрес доставки">
-        <input type="text" placeholder="Номер картки">
-        <button onclick="alert('Замовлення оформлено!')">Підтвердити</button>
+        <h2>Данные для доставки</h2>
+        <input type="text" placeholder="Ваше ім'я та прізвище" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Номер телефону" required>
+        <input type="text" placeholder="Адрес доставки (Город, улица, дом)" required>
+        
+        <h2>Оплата</h2>
+        <input type="text" placeholder="Номер картки (Visa/Mastercard)" required>
+        <input type="text" placeholder="Срок действия (ММ/ГГ)" style="width: 45%; margin-right: 5%;" required>
+        <input type="text" placeholder="CVV" style="width: 45%;" required>
+
+        <button onclick="alert('Замовлення оформлено! Ваш кур\'єр уже в пути!')">Підтвердити замовлення</button>
     </div>
 
-    <!-- Левый баннер -->
-    <div class="side-banner left-banner" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Левый баннер">
+    <div class="side-banner left-banner" onclick="window.open('https://store.steampowered.com/app/570/Dota_2/?l=russian', '_blank')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Акция">
+    </div>
+    <div class="side-banner right-banner" onclick="window.open('https://store.steampowered.com/app/570/Dota_2/?l=russian', '_blank')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Акция">
     </div>
 
-    <!-- Правый баннер -->
-    <div class="side-banner right-banner" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_vTUTyFdN7WdPAg3CKn9MCDtaw7ZmT0hjg&s" alt="Правый баннер">
-    </div>
-
-    <!-- ❗ Добавленный футер через скрипт -->
-    <script>
-        const footer = document.createElement("footer");
-        footer.style.marginTop = "60px";
-        footer.style.padding = "20px";
-        footer.style.background = "#111";
-        footer.style.borderTop = "2px solid gold";
-        footer.style.color = "gold";
-        footer.style.fontSize = "18px";
-        footer.style.textAlign = "center";
-
-        footer.innerHTML = `
-            © 2025 Golden Shop • Всі права не захищені)<br>
-            <span style="font-size:14px; color:gray;">Дякуємо за оформлення замовлення!</span>
-        `;
-
-        document.body.appendChild(footer);
-    </script>
+    <footer>
+        <p>© 2025 Golden Shop • Всі права не захищені)</p>
+        <p class="small-text">Дякуємо за оформлення замовлення!</p>
+    </footer>
 
 </body>
 </html>
