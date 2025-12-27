@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню Dota 2</title>
+    <title>Меню Dota 2 - Golden Shop</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="categories.js"></script>
-
 </head>
 <body>
-
     <header>
         <div class="header-content">
             <div class="logo-area">
                 <a href="index.html">
-                    <img src="https://i.imgur.com/8Qp40pB.png" alt="Dota 2 Logo" class="dota-logo">
-                    <span class="dota-title">DOTA 2</span>
+                    <span class="dota-title">DOTA 2 SHOP</span>
                 </a>
             </div>
             
-            <div class="nav-links">
-                <a href="index.html">Главная</a>
-                <a href="index.html#about">О нас</a>
-                <a href="https://store.steampowered.com/app/570/Dota_2/?l=russian" target="_blank">Дота2</a>
-            </div>
+            <nav class="nav-links">
+                <a href="index.html">Головна</a>
+                <a href="index.html#about">Про нас</a>
+                <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" class="steam-link">
+                    <i class="fab fa-steam"></i> Грати в Dota 2
+                </a>
+            </nav>
 
             <div class="search-cart-area">
                 <div class="search-box">
-                    <input type="text" placeholder="Search..." class="search-input">
+                    <input type="text" placeholder="Пошук артефактів..." class="search-input" id="searchInput">
                     <i class="fas fa-search search-icon"></i>
                 </div>
                 <div class="cart" id="cartBtn"> 
@@ -40,126 +38,118 @@
     </header>
 
     <div id="cartWindow" class="cart-window">
-        <h2><i class="fas fa-shopping-basket"></i> Ваша Корзина</h2>
-        <ul id="cartItems"> 
-            <li>Корзина пуста. Добавьте предметы!</li>
-        </ul>
-        <div class="cart-total">
-            Общая цена: <span id="totalPrice">0</span> монет
-        </div>
-        <button id="checkoutBtn" class="checkout-button">Оформить заказ</button>
+        <h2><i class="fas fa-shopping-basket"></i> Кошик</h2>
+        <ul id="cartItems"><li>Кошик порожній.</li></ul>
+        <div class="cart-total">Загальна ціна: <span id="totalPrice">0</span>💰</div>
+        <button id="checkoutBtn" class="checkout-button">Оформити замовлення</button>
     </div>
 
-    <h1 class="page-title">
-        <i class="fas fa-swords"></i> КАТАЛОГ ПРЕДМЕТОВ <i class="fas fa-shield-alt"></i>
-    </h1>
+    <h1 class="page-title"><i class="fas fa-swords"></i> КАТАЛОГ <i class="fas fa-shield-alt"></i></h1>
 
     <main class="container">
         <aside class="sidebar">
             <div class="section">
-                <h2>КАТЕГОРИИ</h2>
+                <h2>КАТЕГОРІЇ</h2>
                 <ul>
-                    <li><label><input type="radio" name="category" checked> Расходники (5)</label></li>
-                    <li><label><input type="radio" name="category"> Артефакты (12)</label></li>
-                    <li><label><input type="radio" name="category"> Снаряжение (9)</label></li>
-                    <li><label><input type="radio" name="category"> Свитки (3)</label></li>
+                    <li><label><input type="radio" name="category" data-cat="Все" checked> Все</label></li>
+                    <li><label><input type="radio" name="category" data-cat="Витратні"> Витратні</label></li>
+                    <li><label><input type="radio" name="category" data-cat="Артефакти"> Артефакти</label></li>
+                    <li><label><input type="radio" name="category" data-cat="Спорядження"> Спорядження</label></li>
                 </ul>
-            </div>
-            <div class="section filters">
-                <h2>ФИЛЬТРЫ</h2>
-                <label>Цена: от <input type="number" value="0" min="0"> до <input type="number" value="1000" min="0"></label>
-                <button class="apply-button">ПРИМЕНИТЬ</button>
             </div>
         </aside>
 
         <section class="products-grid">
-            <div class="sort-bar">
-                Сортировка: <a href="#">По цене</a>
-            </div>
-
             <div class="product-list">
                 <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/t3O4j1e.png" alt="Mango"></div>
+                    <div class="product-image-container"><img src="https://i.ibb.co/tPXXMXqK/images-Photoroom.png" alt="Mango"></div>
                     <h3 class="product-name">Mango</h3>
-                    <p class="product-category">Расходник</p>
-                    <p class="product-price">Цена: 65</p>
+                    <p class="product-category">Витратні</p>
+                    <p class="product-price">Ціна: 65</p>
                     <button class="buy-button buyBtn" data-name="Mango" data-price="65">Придбати</button>
                 </div>
                 <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/L3kP4nN.png" alt="Tango"></div>
+                    <div class="product-image-container"><img src="https://i.ibb.co/rGq9Zk06/Photoroom.png" alt="Tango"></div>
                     <h3 class="product-name">Tango</h3>
-                    <p class="product-category">Расходник</p>
-                    <p class="product-price">Цена: 90</p>
+                    <p class="product-category">Витратні</p>
+                    <p class="product-price">Ціна: 90</p>
                     <button class="buy-button buyBtn" data-name="Tango" data-price="90">Придбати</button>
                 </div>
                 <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Bottle"></div>
-                    <h3 class="product-name">Bottle</h3>
-                    <p class="product-category">Расходник</p>
-                    <p class="product-price">Цена: 660</p>
-                    <button class="buy-button buyBtn" data-name="Bottle" data-price="660">Придбати</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/vH1mB9i.png" alt="Magic Stick"></div>
+                    <div class="product-image-container"><img src="https://i.ibb.co/Gv2fHTzx/magic-stick.png" alt="Magic Stick"></div>
                     <h3 class="product-name">Magic Stick</h3>
-                    <p class="product-category">Основное</p>
-                    <p class="product-price">Цена: 200</p>
+                    <p class="product-category">Спорядження</p>
+                    <p class="product-price">Ціна: 200</p>
                     <button class="buy-button buyBtn" data-name="Magic Stick" data-price="200">Придбати</button>
                 </div>
                 <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/2Xy1V8T.png" alt="Healing Salve"></div>
-                    <h3 class="product-name">Healing Salve</h3>
-                    <p class="product-category">Расходник</p>
-                    <p class="product-price">Цена: 100</p>
-                    <button class="buy-button buyBtn" data-name="Healing Salve" data-price="100">Придбати</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Boots of Speed"></div>
-                    <h3 class="product-name">Boots of Speed</h3>
-                    <p class="product-category">Снаряжение</p>
-                    <p class="product-price">Цена: 450</p>
-                    <button class="buy-button buyBtn" data-name="Boots of Speed" data-price="450">Придбати</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Observer Ward"></div>
-                    <h3 class="product-name">Observer Ward</h3>
-                    <p class="product-category">Расходник</p>
-                    <p class="product-price">Цена: 0</p>
-                    <button class="buy-button buyBtn" data-name="Observer Ward" data-price="0">Придбати</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Phase Boots"></div>
-                    <h3 class="product-name">Phase Boots</h3>
-                    <p class="product-category">Снаряжение</p>
-                    <p class="product-price">Цена: 1650</p>
-                    <button class="buy-button buyBtn" data-name="Phase Boots" data-price="1650">Придбати</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Blade Mail"></div>
+                    <div class="product-image-container"><img src="https://i.ibb.co/NgNrGLBp/12f03dfba53e6335fa26eff647685e3c-Photoroom.png" alt="Blade Mail"></div>
                     <h3 class="product-name">Blade Mail</h3>
-                    <p class="product-category">Артефакт</p>
-                    <p class="product-price">Цена: 2200</p>
+                    <p class="product-category">Артефакти</p>
+                    <p class="product-price">Ціна: 2200</p>
                     <button class="buy-button buyBtn" data-name="Blade Mail" data-price="2200">Придбати</button>
                 </div>
                 <div class="product-card">
-                    <div class="product-image-container"><img src="https://i.imgur.com/qL3jFzR.png" alt="Aghanim's Scepter"></div>
-                    <h3 class="product-name">Aghanim's Scepter</h3>
-                    <p class="product-category">Артефакт</p>
-                    <p class="product-price">Цена: 4200</p>
-                    <button class="buy-button buyBtn" data-name="Aghanim's Scepter" data-price="4200">Придбати</button>
+                    <div class="product-image-container"><img src="https://i.ibb.co/xqzkqCMk/images-Photoroom.png" alt="Salve"></div>
+                    <h3 class="product-name">Healing Salve</h3>
+                    <p class="product-category">Витратні</p>
+                    <p class="product-price">Ціна: 100</p>
+                    <button class="buy-button buyBtn" data-name="Healing Salve" data-price="100">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.ibb.co/ccQgJXkh/images-1-Photoroom.png" alt="Bottle"></div>
+                    <h3 class="product-name">Bottle</h3>
+                    <p class="product-category">Витратні</p>
+                    <p class="product-price">Ціна: 675</p>
+                    <button class="buy-button buyBtn" data-name="Bottle" data-price="675">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.ibb.co/NPwG1fR/Boots-of-Speed-Photoroom.png" alt="Boots"></div>
+                    <h3 class="product-name">Boots of Speed</h3>
+                    <p class="product-category">Спорядження</p>
+                    <p class="product-price">Ціна: 500</p>
+                    <button class="buy-button buyBtn" data-name="Boots of Speed" data-price="500">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.ibb.co/6JrSqtm1/images-2-Photoroom.png" alt="PT"></div>
+                    <h3 class="product-name">Power Treads</h3>
+                    <p class="product-category">Спорядження</p>
+                    <p class="product-price">Ціна: 1400</p>
+                    <button class="buy-button buyBtn" data-name="Power Treads" data-price="1400">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.ibb.co/xS6p5p98/d32cd776d14004f36b8e27d60156b29b-Photoroom.png" alt="Blink"></div>
+                    <h3 class="product-name">Blink Dagger</h3>
+                    <p class="product-category">Спорядження</p>
+                    <p class="product-price">Ціна: 2250</p>
+                    <button class="buy-button buyBtn" data-name="Blink Dagger" data-price="2250">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.ibb.co/mrRsH6XQ/images-3-Photoroom.png" alt="Desolator"></div>
+                    <h3 class="product-name">Desolator</h3>
+                    <p class="product-category">Артефакти</p>
+                    <p class="product-price">Ціна: 3500</p>
+                    <button class="buy-button buyBtn" data-name="Desolator" data-price="3500">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.ibb.co/4nc553d1/images-4-Photoroom.png" alt="BKB"></div>
+                    <h3 class="product-name">Black King Bar</h3>
+                    <p class="product-category">Артефакти</p>
+                    <p class="product-price">Ціна: 4050</p>
+                    <button class="buy-button buyBtn" data-name="BKB" data-price="4050">Придбати</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><img src="https://i.ibb.co/sdHd8ZgZ/images-5-Photoroom.png" alt="Radiance"></div>
+                    <h3 class="product-name">Radiance</h3>
+                    <p class="product-category">Артефакти</p>
+                    <p class="product-price">Ціна: 4700</p>
+                    <button class="buy-button buyBtn" data-name="Radiance" data-price="4700">Придбати</button>
                 </div>
             </div>
         </section>
-
     </main>
-
-    <footer>
-        <p class="social-title">Наши соцсети</p>
-        <p>Номер телефона | Город: Бельвю, Вашингтон</p>
-    </footer>
 
     <script src="script.js"></script>
     <script src="categories.js"></script>
-
 </body>
 </html>
